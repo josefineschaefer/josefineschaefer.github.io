@@ -12,12 +12,6 @@ const { src = '/astronaut-hero-img.webp' } = Astro.props
           <slot>Hi, I'm <span class="text-gradient">Josefine.</span></slot>
         </h1>
         <h2>Accessibility Advocate, Frontend Dev & International Speaker</h2>
-        <div class="flex flex-col gap-3 min-[500px]:flex-row">
-          <a class="button has-icon" href="https://github.com/markteekman/accessible-astro-starter">
-            <Icon pack="ion" name="star-outline" />
-            Get in Touch
-          </a>
-        </div>
       </div>
       <img class="hidden lg:block" src={src} alt="" decoding="async" />
     </div>
