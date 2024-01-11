@@ -2,7 +2,6 @@
 import DefaultLayout from '../layouts/DefaultLayout.astro'
 import Hero from '../components/Hero.astro'
 import Feature from '../components/Feature.astro'
-import ContentMedia from '../components/ContentMedia.astro'
 import { Icon } from 'astro-icon'
 ---
 
@@ -14,13 +13,13 @@ import { Icon } from 'astro-icon'
         <a href="https://twitter.com/JsfnSchfr" title="Go to the Twitter Profile">
           <Icon pack="ion" name="logo-twitter" />
         </a>
-        <a href="https://www.linkedin.com/in/j-schaefer/" title="Go to the GitHub page">
+        <a href="https://www.linkedin.com/in/j-schaefer/" title="Go to the LinkedIn Profile">
           <Icon pack="ion" name="logo-linkedin" />
         </a>
         <a href="https://github.com/josefineschaefer/" title="Go to the GitHub page">
           <Icon pack="ion" name="logo-github" />
         </a>
-        <a href="https://github.com/josefineschaefer/" title="Go to the GitHub page">
+        <a href="https://dev.to/josefine" title="Go to the Dev.to Profile">
           <Icon pack="ic" name="outline-logo-dev"/>
         </a>
       </div>
@@ -30,38 +29,16 @@ import { Icon } from 'astro-icon'
     <div class="container">
       <h2 class="mb-16 text-6xl">What I Do</h2>
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-        <Feature icon="mdi:tailwind" title="Tailwind CSS">
-          Use the power of Tailwind to greatly improve your productivity and enhance your developer workflow.
+        <Feature icon="mdi:tailwind" title="Accessibility">
+          Web Accessibility has been engrained into my journey in tech right from that start, and it's the topic I care most deeply about. Together, I believe, we should all strive for a more accessible, inclusive web.
         </Feature>
-        <Feature icon="mdi:wheelchair-accessibility" title="a11y Components">
-          17 components and counting, all tried and tested for the most optimal accessible experience for your visitors.
+        <Feature icon="mdi:wheelchair-accessibility" title="Public Speaking">
+          I love (developer) conferences and community meet-ups. Are you looking for a speaker to talk about web accessibility, getting into tech or inclusive communities? You can find a full list of my available talks on <a href="https://sessionize.com/josefine-schaefer/">sessionize</a>. 
         </Feature>
-        <Feature icon="mdi:looks" title="Prettier">
-          Less worry about formatting your code, let the Astro Prettier integration do the heavy lifting.
+        <Feature icon="mdi:looks" title="Mentoring">
+          Are you looking for someone to chat? I am offering free 1:1 mentoring sessions for women & non-binary folks looking to get into tech or developing their carreer. Get in touch via <a href="https://www.linkedin.com/in/j-schaefer/">LinkedIn</a> to book a session :) 
         </Feature>
       </div>
     </div>
   </section>
-<section>
-  <div class="container">
-  <h2>What I Do</h2>
-  <ContentMedia imgSrc="/accessible-components.webp">
-    <h2>Accessible Components</h2>
-    <p class="text-2xl">
-      This theme provides plenty of tried and tested Accessible Astro Components. Some are native to this theme and a
-      lot of others are integrated using a <a href="https://github.com/markteekman/accessible-astro-components"
-        >separate package</a
-      >. They'll get you up and running in building an accessible solution for your visitors.
-    </p>
-  </ContentMedia>
-  <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={true}>
-    <h2>WCAG 2.1 AA Compliant</h2>
-    <p class="text-2xl">
-      Using semantic HTML, landmarks, skip links, screen reader friendly content, aria-labels, keyboard accessible
-      navigation and components, clear outlines and tab indicators and the right color contrast, you're more certain of
-      reaching WCAG AA compliance.
-    </p>
-  </ContentMedia>
-</div>
-</section>
 </DefaultLayout>
