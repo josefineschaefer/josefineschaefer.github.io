@@ -1,31 +1,15 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro'
 import Hero from '../components/Hero.astro'
-import Feature from '../components/Feature.astro'
-import { Icon } from 'astro-icon'
+import Feature from '../components/feature.astro'
+import SocialIcons from '../components/SocialIcons.astro'
+
 ---
 
 <DefaultLayout title="Home">
   <Hero />
-  <section class="my-64">
-    <div class="container">
-      <div class="grid grid-cols-1 gap-16  md:grid-cols-2 lg:grid-cols-4 lg:gap-64">
-        <a href="https://twitter.com/JsfnSchfr" title="Go to the Twitter Profile">
-          <Icon pack="ion" name="logo-twitter" />
-        </a>
-        <a href="https://www.linkedin.com/in/j-schaefer/" title="Go to the LinkedIn Profile">
-          <Icon pack="ion" name="logo-linkedin" />
-        </a>
-        <a href="https://github.com/josefineschaefer/" title="Go to the GitHub page">
-          <Icon pack="ion" name="logo-github" />
-        </a>
-        <a href="https://dev.to/josefine" title="Go to the Dev.to Profile">
-          <Icon pack="ic" name="outline-logo-dev"/>
-        </a>
-      </div>
-    </div>
-  </section>
-  <section class="my-64">
+<SocialIcons/>
+  <section class="my-32">
     <div class="container">
       <h2 class="mb-16 text-6xl">What I Do</h2>
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
