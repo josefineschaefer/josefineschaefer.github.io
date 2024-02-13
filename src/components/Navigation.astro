@@ -3,13 +3,15 @@ import ResponsiveToggle from './ResponsiveToggle.astro'
 import { DarkMode } from 'accessible-astro-components'
 import { Image } from 'astro:assets'
 import logo from '../assets/img/logo.svg'
+import Josefine_Schaefer_Logo_RZ from '../assets/img/Josefine_Schaefer_Logo_RZ.svg'
+
 ---
 
 <div id="main-navigation" class="is-desktop py-8">
   <div class="container">
     <a href="/" class="flex items-center gap-2 !no-underline">
       <Image src={logo} alt="Accessibility Logo" width="47" height="37" />
-      <span>Josefine Schaefer</span>
+      <Image src={Josefine_Schaefer_Logo_RZ} alt="Josefine Schaefer" aria-hidden="true" height="32"/>
     </a>
     <div class="wrapper">
       <nav class="desktop-menu" aria-label="Main navigation desktop">

@@ -11,6 +11,13 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Syne", sans-serif;
+  src: local('Syne'), local ('Syne'), url('https://fonts.googleapis.com/css2?family=Syne:wght@600&display=swap');
+  font-weight: normal;
+  font-display: swap;
+}
+
 body {
   font-family: var(--font-family-default);
   text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;

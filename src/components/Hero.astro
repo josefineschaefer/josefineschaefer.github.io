@@ -23,11 +23,13 @@ const { src = '/Josi_Header_Portrait.png' } = Astro.props
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
   :global(.darkmode .text-gradient) {
     background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-400));
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  h1 {
+    font-family: var(--font-family-special)
   }
 </style>
