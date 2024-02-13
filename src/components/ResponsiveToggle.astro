@@ -12,7 +12,7 @@
 <script>
   document.addEventListener('astro:page-load', () => {
     // variables
-    const responsiveToggle = document.querySelector('.responsive-toggle')
+    const responsiveToggle = document.querySelector('.responsive-toggle')!
 
     // functions
     const openMenu = (toggle) => {
@@ -29,7 +29,7 @@
 
     // execution
     responsiveToggle.addEventListener('click', (_) => {
-      const mobileNavigation = document.querySelector('.mobile-menu')
+      const mobileNavigation = document.querySelector('.mobile-menu')!
 
       mobileNavigation.classList.toggle('show')
       mobileNavigation.classList.contains('show') ? openMenu(responsiveToggle) : closeMenu(responsiveToggle)
