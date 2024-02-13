@@ -3,13 +3,15 @@ import ResponsiveToggle from './ResponsiveToggle.astro'
 import { DarkMode } from 'accessible-astro-components'
 import { Image } from 'astro:assets'
 import logo from '../assets/img/logo.svg'
+import Josefine_Schaefer_Logo_RZ from '../assets/img/Josefine_Schaefer_Logo_RZ.svg'
+
 ---
 
 <div id="main-navigation" class="is-desktop py-8">
   <div class="container">
     <a href="/" class="flex items-center gap-2 !no-underline">
       <Image src={logo} alt="Accessibility Logo" width="47" height="37" />
-      <span>Josefine Schaefer</span>
+      <Image src={Josefine_Schaefer_Logo_RZ} alt="Josefine Schaefer" aria-hidden="true" height="32"/>
     </a>
     <div class="wrapper">
       <nav class="desktop-menu" aria-label="Main navigation desktop">
@@ -31,7 +33,7 @@ import logo from '../assets/img/logo.svg'
 <script>
   document.addEventListener('astro:page-load', () => {
     // variables
-    const mainNav = document.querySelector('#main-navigation')
+    const mainNav = document.querySelector('#main-navigation')!
     const mainMenu = mainNav.querySelector('ul')
     const dropdownMenus = [...document.querySelectorAll('.has-dropdown button')]
 
@@ -57,7 +59,7 @@ import logo from '../assets/img/logo.svg'
 
     const checkMenuSize = () => {
       const mainNavWidth = mainNav.getBoundingClientRect().width
-      const desktopMenuWidth = document.querySelector('.desktop-menu').getBoundingClientRect().width
+      const desktopMenuWidth = document.querySelector('.desktop-menu')!.getBoundingClientRect().width
       const logoWidthBuffer = 300
       const totalMenuWidth = Math.round(desktopMenuWidth) + logoWidthBuffer
 
@@ -110,9 +112,9 @@ import logo from '../assets/img/logo.svg'
     mainMenu &&
       mainMenu.addEventListener('keydown', (event) => {
         const element = event.target as Element
-        const currentMenuItem = element.closest('li')
+        const currentMenuItem = element.closest('li')!
         const menuItems = [...mainMenu.querySelectorAll('.menu-item')]
-        const currentDropdownMenu = element.closest('.has-dropdown button')
+        const currentDropdownMenu = element.closest('.has-dropdown button')!
         const currentDropdownMenuItem = element.closest('.has-dropdown li')
         const currentIndex = menuItems.findIndex((item) => item === currentMenuItem)
 
@@ -140,7 +142,7 @@ import logo from '../assets/img/logo.svg'
         }
 
         if (currentDropdownMenu) {
-          const firstDropdownItem = currentDropdownMenu.nextElementSibling.querySelector('li')
+          const firstDropdownItem = currentDropdownMenu.nextElementSibling!.querySelector('li')
 
           if (key === 'ArrowDown') {
             event.preventDefault()
@@ -154,7 +156,7 @@ import logo from '../assets/img/logo.svg'
         }
 
         if (currentDropdownMenuItem) {
-          const currentDropdownList = currentDropdownMenuItem.parentNode
+          const currentDropdownList = currentDropdownMenuItem.parentNode!
           const dropdownMenuItems = [...currentDropdownList.querySelectorAll('li')]
           const currentIndex = dropdownMenuItems.findIndex((item) => item === currentDropdownMenuItem)
 
@@ -179,7 +181,7 @@ import logo from '../assets/img/logo.svg'
           }
 
           if (key === 'Escape') {
-            const currentDropdownMenu = (currentDropdownList as Element).previousElementSibling
+            const currentDropdownMenu = (currentDropdownList as Element).previousElementSibling!
             targetItem = currentDropdownMenu.parentNode
             closeAllDropdownMenus()
           }
