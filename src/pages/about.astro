@@ -1,13 +1,17 @@
 ---
 import SocialIcons from '../components/SocialIcons.astro'
 import DefaultLayout from '../layouts/DefaultLayout.astro'
+const { src = '/Blueberry.png' } = Astro.props
 ---
 
 <DefaultLayout title="About">
   <section class="my-64">
     <div class="container">
-      <h1 class="my-4">About</h1>
-      <p class="columns-2">
+      <div class="flex justify-between items-end my-4">
+        <h1>About</h1>
+        <img class="h-56" src={src} alt="Josefine Schaefer" decoding="async" />  
+      </div>
+     <p class="columns-2">
         Hey there, I'm Josefine, a front-end developer and accessibility advocate based in Hamburg, Germany. I strongly
         believe in the power of technology to build inclusive communities, and I'm actively involved as a <a href="https://developers.google.com/womentechmakers/ambassadors/directory">Women Tech
         Makers</a> & <a href="https://www.girl-code.co.uk/">GirlCode Ambassador</a>, and <a href="https://developers.google.com/community/experts">Google Developer Expert</a> for Web Technologies. Currently, I'm working at
