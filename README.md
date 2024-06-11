@@ -1,4 +1,4 @@
-# Portfolio using the Accessible Astro Starter
+# Portfolio Page using the Accessible Astro Starter
 
 For this personal website, I am using the [Accessible Astro Starter](https://github.com/markteekman/accessible-astro-starter) by [Mark Teekman](https://github.com/markteekman) with a few small adjustments. 
 
