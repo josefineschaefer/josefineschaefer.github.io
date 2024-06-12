@@ -1,7 +1,6 @@
 ---
 import SocialIcons from '../components/SocialIcons.astro'
 import DefaultLayout from '../layouts/DefaultLayout.astro'
-const { src = '/Blueberry.png' } = Astro.props
 ---
 
 <DefaultLayout title="About">
@@ -9,7 +8,7 @@ const { src = '/Blueberry.png' } = Astro.props
     <div class="container">
       <div class="flex justify-between items-end my-4">
         <h1>About</h1>
-        <img class="h-56" src={src} alt="Josefine Schaefer" decoding="async" />  
+        <img class="h-56" src='/Blueberry.png' alt="woman picking blueberries from a bush" decoding="async" />  
       </div>
      <p class="columns-2">
         Hey there, I'm Josefine, a front-end developer and accessibility advocate based in Hamburg, Germany. I strongly
